@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class TimeController extends AbstractController
 {
-    #[Route('api/time')]
+    #[Route('api/time', name: 'api_time')]
     public function getTime(): JsonResponse
     {
         $time = (new \DateTime())->format("Y-m-d H:i:s");
